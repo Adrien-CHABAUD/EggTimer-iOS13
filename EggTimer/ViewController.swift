@@ -7,15 +7,18 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var progressBar: UIProgressView!
     
+    var player: AVAudioPlayer!
+    
     // Store the timings in a dictionnaries to make the code
     // more clean
-    let eggTime = ["Soft": 300, "Medium": 420, "Hard": 720]
+    let eggTime = ["Soft": 3, "Medium": 420, "Hard": 720]
     
     // Create a timer object
     var timer:Timer = Timer()
@@ -55,7 +58,14 @@ class ViewController: UIViewController {
             // Stop the timer
             timer.invalidate()
             titleLabel.text = "DONE!"
+            playSound()
         }
+    }
+    
+    func playSound() {
+        let url = Bundle.main.url(forResource: "alarm_sound", withExtension: ".mp3")
+        player = try! AVAudioPlayer(contentsOf: url!)
+        player.play()
     }
 }
 
