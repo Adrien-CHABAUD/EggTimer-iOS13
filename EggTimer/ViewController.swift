@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     
     // Store the timings in a dictionnaries to make the code
     // more clean
-    let eggTime = ["Soft": 3, "Medium": 420, "Hard": 720]
+    let eggTime = ["Soft": 360, "Medium": 420, "Hard": 720]
     
     // Create a timer object
     var timer:Timer = Timer()
