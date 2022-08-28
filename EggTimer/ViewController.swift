@@ -20,29 +20,21 @@ class ViewController: UIViewController {
     // Create a timer object
     var timer:Timer = Timer()
     
-    var secondsRemaining:Int = 0
+    var secondsPassed:Int = 0
+    var totalTime = 0
     
     @IBAction func hardnessSelected(_ sender: UIButton) {
-        
-        progressBar.progress = 1
         
         let hardness = sender.currentTitle! // Soft, Medium, Hard
         
         timer.invalidate() // Count only once per second
+
+        totalTime = eggTime[hardness]! // Store the time selected by the user
         
-        switch hardness {
-        case "Soft":
-            print(eggTime[hardness]!)
-            secondsRemaining = eggTime[hardness]!
-        case "Medium":
-            print(eggTime[hardness]!)
-            secondsRemaining = eggTime[hardness]!
-        case "Hard":
-            print(eggTime[hardness]!)
-            secondsRemaining = eggTime[hardness]!
-        default:
-            print("Error")
-        }
+        secondsPassed = 0 // Reset second passed
+        progressBar.progress = 0.0
+        // Reset text
+        titleLabel.text = hardness
         
         // Fire every seconds and repeat
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
@@ -51,15 +43,20 @@ class ViewController: UIViewController {
     // Used to count the passed seconds and invalidate the timer when
     // it is due.
     @objc func updateTimer() -> Void {
-        if secondsRemaining > 0 {
-            print("\(secondsRemaining) seconds.")
-            secondsRemaining -= 1
+        if secondsPassed < totalTime {
+            secondsPassed += 1 // Add seconds
+            
+            // Calculate percentage of completion + show it
+            // in the progressBar
+            let percentageProgress = Float(secondsPassed) / Float(totalTime)
+            progressBar.progress = percentageProgress
+
         } else {
+            // Stop the timer
             timer.invalidate()
             titleLabel.text = "DONE!"
         }
     }
-    
 }
 
 
