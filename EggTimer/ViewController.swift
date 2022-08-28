@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var progressBar: UIProgressView!
     
     // Store the timings in a dictionnaries to make the code
     // more clean
@@ -22,6 +23,8 @@ class ViewController: UIViewController {
     var secondsRemaining:Int = 0
     
     @IBAction func hardnessSelected(_ sender: UIButton) {
+        
+        progressBar.progress = 1
         
         let hardness = sender.currentTitle! // Soft, Medium, Hard
         
