@@ -1,16 +1,38 @@
-![App Brewery Banner](Documentation/AppBreweryBanner.png)
+<!--
+  Title: Egg Timer
+  Description: iOS App of an Egg Timer app, made using SWIFT
+  Author: Adrien CHABAUD
+ -->
+ 
+ <img src="/images/Adrien_banner_01.png">
+ 
+ 
+ # Egg Timer ![iOS Badge](https://img.shields.io/badge/iOS-000000?style=for-the-badge&logo=ios&logoColor=white) ![Swift Badge](https://img.shields.io/badge/Swift%20Version-5-orange) 
 
-# Egg Timer
+This app has been made as part of the **iOS & Swift - The Complete iOS App Development Bootcamp** on Udemy from **The App Brewery**
 
-## Our Goal
+## Table of contents
+* [Goal behind](#goal-behind)
+* [General Info](#general-info)
+* [Learning](#learning-tool)
+* [Technologies](#technologies)
 
-This module will be a mix of tutorials and challenges. Most importantly, we want you to get comfortable with looking up how to do something you've never done before. In certain places of this module, you’ll need to follow the 5 step process you learnt in the Xylophone module and use Google search, StackOverflow and Apple Documentation to make your code do what you want it to. But there are also other parts where we’ll take you step-by-step through new Swift programming concepts. 
+## Goal Behind
 
-## What You'll Make
+The goal behing this project was to apply concepts seen during the previous lectures and projects. To get used to use the Apple Documentation and Google Searches. But also going through new Swift Programming concepts.
 
-You’ll be building a beautiful egg timer app to boil your eggs to perfection depending on how you prefer your eggs. 
+## General Info
 
-## What you will learn
+This app is an egg timer allowing users to boil eggs to perfection depending on how they prefer them.
+
+<p align="center">
+  <img src="/images/screenshot_main_activity_1.png" width=300 hspace=20><img src="/images/screenshot_main_activity_2.png" width=300 hspace=20>
+</p>
+
+
+## Learning Tool
+
+As a learning tool, the conception of this app allowed me to do/learn the following:
 
 * Swift Collection types - Dictionaries
 * The Swift Timer API
@@ -19,9 +41,15 @@ You’ll be building a beautiful egg timer app to boil your eggs to perfection d
 * Functions with outputs
 * How to use the ProgressView
 
+## Technologies
+
+This project uses:
+* *Xcode: 13.4.1*
+* *Swift: 5.6.1*
+
+<p align="center">
+  <img src="Documentation/readme-end-banner.png">
+</p>
 
 
->This is a companion project to The App Brewery's Complete App Development Bootcamp, check out the full course at [www.appbrewery.co](https://www.appbrewery.co/)
-
-![End Banner](Documentation/readme-end-banner.png)
 
