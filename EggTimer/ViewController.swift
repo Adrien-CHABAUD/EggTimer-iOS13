@@ -18,7 +18,7 @@ class ViewController: UIViewController {
     
     // Store the timings in a dictionnaries to make the code
     // more clean
-    let eggTime = ["Soft": 360, "Medium": 420, "Hard": 720]
+    let eggTime = ["Soft": 180, "Medium": 360, "Hard": 540]
     
     // Create a timer object
     var timer:Timer = Timer()
@@ -63,7 +63,7 @@ class ViewController: UIViewController {
     }
     
     func playSound() {
-        let url = Bundle.main.url(forResource: "alarm_sound", withExtension: ".mp3")
+        let url = Bundle.main.url(forResource: "alarm_cock", withExtension: ".mp3")
         player = try! AVAudioPlayer(contentsOf: url!)
         player.play()
     }
